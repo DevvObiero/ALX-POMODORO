@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 
+
 body {
   margin: 0;
-  
+  color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -70,11 +71,17 @@ button {
   padding: 0.5rem 1.2rem;
   border:none;
   border-radius:3rem;
-  margin:0.2rem;
+  margin:0.9rem;
   background:#0C0E1B;
   min-width: 80px;
   cursor: pointer;
 }
+
+button:hover{
+  background: #C9CCEA;
+  color: #0C0E1B;
+}
+
 
 .button-wrapper button.activve {
   color: #0C0E1B;
@@ -84,18 +91,32 @@ button {
 .form-container {
   text-align: center;
 }
-.input-wrapper {
-  margin: 1.5rem;
-}
+
 .input-wrapper input {
-  height: 30px;
-  width: 30px;
-  padding: 2rem;
+  height: 70px; /* Slightly larger to accommodate text */
+  width: 70px; /* Slightly larger to accommodate text */
+  padding: 0.5rem; /* Reduced padding to prevent clipping */
   background-color: #0C0E1B;
-  color:#C9CCEA;
+  color: #C9CCEA;
+  margin-top: 20px;
   border: none;
   border-radius: 50%;
-  margin-right: 0.3rem;
+  margin-right: 0.5rem;
   text-align: center;
-  font-size: 14pt;
+  font-size: 12pt; /* Slightly smaller font to fit */
+  outline: none;
+  caret-color: #FFFFFF;
+}
+
+.input-wrapper input:focus,
+.input-wrapper input::selection {
+  background-color: #2A2C4F;
+  color: #FFFFFF;
+}
+
+.input-wrapper input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  color: #C9CCEA;
 }
